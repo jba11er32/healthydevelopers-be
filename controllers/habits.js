@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { requireToken } = require('../middleware/auth');
 
 const Habit = require('../models/habit');
 

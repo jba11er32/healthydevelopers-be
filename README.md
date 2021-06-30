@@ -1,0 +1,1 @@
+This is the backend for the healthydevelopers app. The backend uses Express and Node.

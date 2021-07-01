@@ -1,33 +1,33 @@
 {
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose": "^5.13.0",
-    "nodemon": "^2.0.9",
-    "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0"
-  },
-  "name": "healthydevelopers-be",
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "seed": "node ./db/seeds.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jba11er32/healthydevelopers-be.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jba11er32/healthydevelopers-be/issues"
-  },
-  "homepage": "https://github.com/jba11er32/healthydevelopers-be#readme",
-  "description": ""
+	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongoose": "^5.13.0",
+		"nodemon": "^2.0.9",
+		"passport": "^0.4.1",
+		"passport-jwt": "^4.0.0"
+	},
+	"name": "healthydevelopers-be",
+	"version": "1.0.0",
+	"main": "index.js",
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon index.js",
+		"start": "node index.js",
+		"seed": "node ./db/seeds.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jba11er32/healthydevelopers-be.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jba11er32/healthydevelopers-be/issues"
+	},
+	"homepage": "https://github.com/jba11er32/healthydevelopers-be#readme",
+	"description": ""
 }

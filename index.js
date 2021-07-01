@@ -12,7 +12,7 @@ const habitControllers = require('./controllers/habits.js');
 app.use('/habits', habitControllers);
 
 const userControllers = require('./controllers/users.js');
-app.use('/users', userController);
+app.use('/users', userControllers);
 
 const { handleErrors } = require('./middleware/custom_errors');
 app.use(handleErrors);

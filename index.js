@@ -8,8 +8,11 @@ app.use(cors());
 const requestLogger = require('./middleware/request_logger');
 app.use(requestLogger);
 
-const habitsControllers = require('./controllers/habits.js');
-app.use('/api/habits', habitsControllers);
+const habitControllers = require('./controllers/habits.js');
+app.use('/habits', habitControllers);
+
+const userControllers = require('./controllers/users.js');
+app.use('/users', userController);
 
 const { handleErrors } = require('./middleware/custom_errors');
 app.use(handleErrors);

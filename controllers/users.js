@@ -13,16 +13,18 @@ router.get('/users', (req, res, next) => {
 
 router.post('/signup', async (req, res, next) => {
 	try {
+		const firstName = req.body.firstName;
+		const lastName = req.body.lastName;
 		const email = req.body.email;
 		const password = await bcrypt.hash(req.body.password, 10);
-		const user = await User.create({ email, password });
+		const user = await User.create({ firstName, lastName, email, password });
 		res.status(201).json(user);
 	} catch (error) {
 		return next(error);
 	}
 });
 
-router.post('/signin', (req, res, next) => {
+router.post('/login', (req, res, next) => {
 	let foundUser;
 	User.findOne({ email: req.body.email })
 		.then((user) => {

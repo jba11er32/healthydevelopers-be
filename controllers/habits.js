@@ -5,7 +5,7 @@ const { requireToken } = require('../middleware/auth');
 const Habit = require('../models/habit');
 
 router.get('/', requireToken, (req, res, next) => {
-	Habit.find({})
+	Habit.find({ owner: req.user._id })
 		.then((habits) => res.json(habits))
 		.catch(next);
 });
@@ -17,7 +17,7 @@ router.get('/:id', requireToken, (req, res, next) => {
 		.catch(next);
 });
 
-router.post('/', requireToken, (req, res, next) => {
+router.post('/create', requireToken, (req, res, next) => {
 	const owner = req.user._id;
 	Habit.create({ ...req.body, owner })
 		.then((habit) => res.json(habit))
@@ -27,7 +27,9 @@ router.post('/', requireToken, (req, res, next) => {
 router.put('/:id', requireToken, (req, res, next) => {
 	const id = req.params.id;
 	const updated = req.body;
-	Habit.find;
+	Habit.findOneAndUpdate({ _id: id }, updated, { new: true })
+		.then((habit) => res.json(habit))
+		.catch(next);
 });
 
 router.delete('/:id', requireToken, (req, res, next) => {

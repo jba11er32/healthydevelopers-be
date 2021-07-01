@@ -36,3 +36,5 @@ router.post('/login', (req, res, next) => {
 });
 
 module.exports = router;
+
+// Tested all CRUD functions on Postman and working up-to-date

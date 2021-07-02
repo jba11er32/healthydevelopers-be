@@ -18,6 +18,6 @@ app.use('/users', userControllers);
 const { handleErrors } = require('./middleware/custom_errors');
 app.use(handleErrors);
 
-app.listen(4000, () => {
-	console.log('app listening on port 4000');
+app.listen(process.env.PORT || 4000, () => {
+	console.log('App Launched');
 });

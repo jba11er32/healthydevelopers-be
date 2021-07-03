@@ -5,12 +5,6 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const { createUserToken } = require('../middleware/auth');
 
-router.get('/users', (req, res, next) => {
-	User.find({})
-		.then((user) => res.json(user))
-		.catch(next);
-});
-
 router.post('/signup', async (req, res, next) => {
 	try {
 		const firstName = req.body.firstName;

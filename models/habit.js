@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const HabitSchema = new Schema(
 	{
-		water: Number,
-		pushups: Number,
-		situps: Number,
-		squats: Number,
+		water: String,
+		pushups: String,
+		situps: String,
+		squats: String,
 		owner: {
 			type: Schema.Types.ObjectId,
 			ref: 'User',

@@ -8,7 +8,7 @@ const HabitSchema = new Schema(
 		situps: Number,
 		squats: Number,
 		owner: {
-			type: mongoose.Schema.Types.ObjectId,
+			type: Schema.Types.ObjectId,
 			ref: 'User',
 			required: true,
 		},

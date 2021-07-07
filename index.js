@@ -10,7 +10,7 @@ const requestLogger = require('./middleware/request_logger');
 app.use(requestLogger);
 
 const habitControllers = require('./controllers/habits.js');
-app.use('/habits', habitControllers);
+app.use('/', habitControllers);
 
 const userControllers = require('./controllers/users.js');
 app.use('/users', userControllers);

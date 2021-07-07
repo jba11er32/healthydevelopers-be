@@ -4,7 +4,7 @@ const { requireToken } = require('../middleware/auth');
 
 const Habit = require('../models/habit');
 
-router.get('/', requireToken, (req, res, next) => {
+router.get('/habits', requireToken, (req, res, next) => {
 	Habit.find({ owner: req.user._id })
 		.then((habits) => res.json(habits))
 		.catch(next);
